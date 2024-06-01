@@ -86,7 +86,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
 
   try {
-    const resetURL = `http://localhost:5173/reset/password/${resetPasswordToken}`;
+    const resetURL = `https://socialbeing.netlify.app/reset/password/${resetPasswordToken}`;
 
     const message = `Forgot your password ? Please follow the link \n\n ${resetURL}\n and provide your new password and password confirm on it. Your password Reset Token is valid for just 5 minutes.\n\n  Note :- If you haven't requested this email than please ignore this...`;
 
